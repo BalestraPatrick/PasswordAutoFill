@@ -12,9 +12,11 @@
 		AE68FA761EFDBA2200CA8EE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE68FA741EFDBA2200CA8EE4 /* Main.storyboard */; };
 		AE68FA781EFDBA2200CA8EE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE68FA771EFDBA2200CA8EE4 /* Assets.xcassets */; };
 		AE68FA7B1EFDBA2200CA8EE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE68FA791EFDBA2200CA8EE4 /* LaunchScreen.storyboard */; };
+		AE6DBB691EFEC6F300368A3C /* apple-app-site-association in Resources */ = {isa = PBXBuildFile; fileRef = AE6DBB681EFEC6F300368A3C /* apple-app-site-association */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE1046C71EFE6DDF000978E9 /* AutoFill.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoFill.entitlements; sourceTree = "<group>"; };
 		AE68FA6D1EFDBA2100CA8EE4 /* AutoFill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoFill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE68FA701EFDBA2100CA8EE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE68FA721EFDBA2200CA8EE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,7 @@
 		AE68FA771EFDBA2200CA8EE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE68FA7A1EFDBA2200CA8EE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE68FA7C1EFDBA2200CA8EE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE6DBB681EFEC6F300368A3C /* apple-app-site-association */ = {isa = PBXFileReference; lastKnownFileType = text; path = "apple-app-site-association"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,8 @@
 		AE68FA6F1EFDBA2100CA8EE4 /* AutoFill */ = {
 			isa = PBXGroup;
 			children = (
+				AE1046C71EFE6DDF000978E9 /* AutoFill.entitlements */,
+				AE6DBB681EFEC6F300368A3C /* apple-app-site-association */,
 				AE68FA701EFDBA2100CA8EE4 /* AppDelegate.swift */,
 				AE68FA721EFDBA2200CA8EE4 /* ViewController.swift */,
 				AE68FA741EFDBA2200CA8EE4 /* Main.storyboard */,
@@ -96,6 +101,11 @@
 				TargetAttributes = {
 					AE68FA6C1EFDBA2100CA8EE4 = {
 						CreatedOnToolsVersion = 9.0;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -125,6 +135,7 @@
 				AE68FA7B1EFDBA2200CA8EE4 /* LaunchScreen.storyboard in Resources */,
 				AE68FA781EFDBA2200CA8EE4 /* Assets.xcassets in Resources */,
 				AE68FA761EFDBA2200CA8EE4 /* Main.storyboard in Resources */,
+				AE6DBB691EFEC6F300368A3C /* apple-app-site-association in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +280,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AutoFill/AutoFill.entitlements;
 				DEVELOPMENT_TEAM = 2EZDW5DVTJ;
 				INFOPLIST_FILE = AutoFill/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -283,6 +295,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AutoFill/AutoFill.entitlements;
 				DEVELOPMENT_TEAM = 2EZDW5DVTJ;
 				INFOPLIST_FILE = AutoFill/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -312,6 +325,7 @@
 				AE68FA811EFDBA2200CA8EE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
